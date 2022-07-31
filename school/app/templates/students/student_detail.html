@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5" style="width: 70%;">
+    <div class="col">
+        <h1 class="text-center">Student Details</h1>
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                {% if student.photo %}
+                <img src="{{student.photo.url}}" class="card-img-top" alt="...">
+                {% else %}
+                <img src="https://w7.pngwing.com/pngs/17/243/png-transparent-computer-icons-arshad-ayub-graduate-business-school-students-miscellaneous-logo-monochrome.png"
+                     class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{student.first_name}} {{student.last_name}}</h5>
+                    <p class="card-text">{{student.email}}</p>
+                    <p class="card-text">{{student.birthday}}</p>
+                    <p class="card-text">{{student.classroom}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <a href="{% url 'school:all' %}" class="d-block btn btn-primary btn-lg my-5">BACK</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

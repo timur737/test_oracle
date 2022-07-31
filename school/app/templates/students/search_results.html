@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for student in object_list %}
+
+<ul class="list-group">
+    <li class="list-group-item">{{ student }}
+
+        <a class="btn btn-primary"
+           href="{% url 'school:student_detail' student.id %}">Detail</a>
+        <a class="btn btn-secondary"
+           href="{% url 'school:student_update' student.id %}">Update</a>
+        <a class="btn btn-danger"
+           href="{% url 'school:student_delete' student.id %}">Delete</a>
+
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

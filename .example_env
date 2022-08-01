@@ -1,4 +1,4 @@
-SECRET_KEY=django-insecure-b4=w9=@u0!fh7ldu&q#2sms!)aqo4ga%)2^du-7f%o%04m%$$@
+SECRET_KEY=django-insecure-supersecretkeywithsalt
 DEBUG=True
 EMAIL_HOST=smtp.gmail.com
 EMAIL_HOST_USER=johndoe@gmail.com

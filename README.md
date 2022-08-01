@@ -16,7 +16,7 @@ $ cd test_oracle
 ```sh
 $ docker-compose up
 ```
-Если в процессе создания контейнера при запуске ```python manage.py migrate``` пишет ```Connectin refused```
+Если в процессе создания контейнера при запуске ```python manage.py migrate``` пишет ```Connection refused```
 Еще раз запустите 
 ```sh
 $ docker-compose up
